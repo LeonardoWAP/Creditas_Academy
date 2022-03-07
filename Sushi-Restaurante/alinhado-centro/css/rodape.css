@@ -5,10 +5,11 @@ footer{
 }
 
 .footer_background{
-    
     background-image: url("../imagens/Rodapé.png");
     width: 940px;
     height: 100px;
+
+    vertical-align: top;
   }
 
 
