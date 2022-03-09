@@ -6,6 +6,8 @@ sushi creditas - alinhado esquerda : https://leonardowap.github.io/Creditas_Acad
 
 sushi creditas - alinhado Centro : https://leonardowap.github.io/Creditas_Academy/Sushi-Restaurante/alinhado-centro/index.html
 
+sushi creditas - fluido menu e conteudo : https://leonardowap.github.io/Creditas_Academy/Sushi-Restaurante/fluido-menu-conteudo/
+
 <br><br><br>
 <br><br><br>
 
@@ -20,3 +22,5 @@ Layout montado no figma : https://www.figma.com/file/8idkTLG5myiZXN7g6F292z/Unti
 <br><br><br>
 
 ![Contatos](https://user-images.githubusercontent.com/57870208/157260597-c79e144a-1d63-4832-8100-ba1377a7b6ae.png)
+
+
