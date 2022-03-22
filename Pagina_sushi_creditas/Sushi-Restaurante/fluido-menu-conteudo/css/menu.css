@@ -1,0 +1,32 @@
+/* Menu */
+ul {
+
+  width: 100%;
+}
+
+li {
+  box-sizing: border-box;
+  background-color:var(--preto);
+}
+
+li a {
+  display:block;
+  color: var(--amarelo);
+  text-align: center; 
+  padding: 40px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: var(--vermelho)
+}
+.sessão_menu{
+  position: fixed;
+  background-color:var(--preto);
+  width: 10%;
+  height: 100%;
+  display:inline-block;
+  min-width: 650px;
+
+
+}

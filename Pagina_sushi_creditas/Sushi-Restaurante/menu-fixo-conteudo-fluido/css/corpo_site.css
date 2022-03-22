@@ -1,0 +1,24 @@
+:root{
+    --preto:#0D0D0D;
+    --cinza:#E2D8CB;
+    --amarelo:#CEAD84; 
+    --vermelho:#8C3A3A;
+    --destaques:#E1D6C9;
+}
+
+.corpo{
+    display:inline-block;
+    vertical-align: top;
+    background-color: var(--amarelo);
+
+    
+    width: 100%;
+    background-color: var(--destaques);
+    text-align: center;
+}  
+main{
+    width: 100%;
+    margin: 0 auto;
+    vertical-align: top;
+    background-color: var(--cinza);
+  }
