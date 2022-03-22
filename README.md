@@ -11,7 +11,14 @@ sushi creditas - alinhado Centro : https://leonardowap.github.io/Creditas_Academ
 sushi creditas - fluido menu e conteudo : https://leonardowap.github.io/Creditas_Academy/Sushi-Restaurante/fluido-menu-conteudo/
 
 <br><br><br>
+
+sushi creditas - menu fixo e conteudo fluido :https://leonardowap.github.io/Creditas_Academy/Sushi-Restaurante/menu-fixo-conteudo-fluido/
+
+
+
 <br><br><br>
+<br><br><br>
+
 
 Layout montado no figma : https://www.figma.com/file/8idkTLG5myiZXN7g6F292z/Untitled?node-id=3%3A323
 
