@@ -1,3 +1,5 @@
+// https://replit.com/join/tcggokpgoz-leonardowiller2
+
 function palindromo(palindromo){
     var resposta = palindromo.toUpperCase().replace(/[^a-zA-Z]/g,"");
   
