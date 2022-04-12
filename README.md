@@ -1,6 +1,6 @@
 # Creditas_Academy
 
-sushi creditas - alinhado esquerda : https://leonardowap.github.io/Creditas_Academy/Sushi-Restaurante/alinhado-esquerda/
+sushi creditas -  <a href="https://leonardowap.github.io/Creditas_Academy/Sushi-Restaurante/alinhado-esquerda/"> alinhado esquerda : </a> 
 
 <br>
 
