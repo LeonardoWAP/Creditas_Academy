@@ -1,0 +1,56 @@
+/* tamanho do menus*/
+.sessão_menu{
+  height: 0;
+}
+
+/*altura site */
+.cardapio{
+  height: 1428px;
+}
+
+/*titulo*/
+.h2_destaques{
+  font-size: 250%;
+  padding: 2% 0% 0 0;
+}
+.hr_destaques{
+  background:var(--vermelho);
+  width: 40%;
+  margin-left: 30%;
+  border-color:var(--vermelho);
+}
+/*titulo*/
+
+.retangulos_destaques{
+  display: inline-block;
+  background-color:var(--vermelho);
+  width: 161px;
+  height: 200px;
+  border-radius: 10%;
+  margin-top: 2%;  
+}
+
+.img_destaques{
+  padding: 15%;
+}
+
+.p_descricao{
+  height: 30%;
+  width: 40%;
+  display: inline-block;
+  vertical-align:middle;
+  font-size: 150%;
+  text-align:justify;
+  vertical-align: top;
+  margin-top:3.5% ;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.p_imagem{
+  font-size: 250%;
+}
+
+.P_cardapiosalgado{
+  margin-left: 100%;
+}
