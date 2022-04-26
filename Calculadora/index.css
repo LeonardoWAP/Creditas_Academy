@@ -1,0 +1,53 @@
+.backGround{
+    height: 100%;
+    background-image: linear-gradient(45deg,black , rgb(27, 190, 27));
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.tituloNome{
+    text-align: center;
+    padding: 5%;
+}
+
+button{
+    width: 100px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 2% 5%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 200%;
+    margin: 1% 2;
+    cursor: pointer;
+    transition: 0.8s;
+}
+.botao:hover{
+    background-color: orange;
+    transition: 0.8s;
+    font-size: 201%;
+}
+
+.calculadora{
+    display: fixed;
+    font-size: 30px;
+    
+
+}
+
+.blocoCalculadora{
+    margin: 0 auto;
+    width: 417px;
+     
+}
+
+p{
+    width: 415px;
+    background-color:cornsilk;
+    height: 100px;
+
+}
+
+
