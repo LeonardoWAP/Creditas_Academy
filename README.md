@@ -1,18 +1,18 @@
 # Creditas_Academy
 
-sushi creditas - alinhado esquerda : https://leonardowap.github.io/Creditas_Academy/Sushi-Restaurante/alinhado-esquerda/
+sushi creditas -  <a href="https://leonardowap.github.io/Creditas_Academy/Sushi-Restaurante/alinhado-esquerda/"> alinhado esquerda </a> 
 
 <br>
 
-sushi creditas - alinhado Centro : https://leonardowap.github.io/Creditas_Academy/Sushi-Restaurante/alinhado-centro/index.html
+sushi creditas - <a href= "https://leonardowap.github.io/Creditas_Academy/Sushi-Restaurante/alinhado-centro/index.html"> alinhado Centro </a>
 
 <br>
 
-sushi creditas - fluido menu e conteudo : https://leonardowap.github.io/Creditas_Academy/Sushi-Restaurante/fluido-menu-conteudo/
+sushi creditas - <a href= "https://leonardowap.github.io/Creditas_Academy/Sushi-Restaurante/fluido-menu-conteudo/"> fluido menu e conteudo </a>
 
 <br>
 
-sushi creditas - menu fixo e conteudo fluido :https://leonardowap.github.io/Creditas_Academy/Sushi-Restaurante/menu-fixo-conteudo-fluido/
+sushi creditas -<a href= "https://leonardowap.github.io/Creditas_Academy/Sushi-Restaurante/menu-fixo-conteudo-fluido/"> Menu fixo conteudo fluido </a>
 
 
 
