@@ -35,6 +35,36 @@ function convertStringToNumber(number){
   return parseInt(number)
 }
 
+function verifyTypeNumber(){
+  if (flag == 0 ){
+    firstNumber = visor.innerHTML
+    flag = 1
+    console.log("capturando o fisrtnumber = " + firstNumber)
+ 
+    visor.innerHTML = ""
+  }
+
+
+ else if(flag == 1){
+      
+    secondNumber = visor.innerHTML
+    console.log("capturando o secund = " + secondNumber)
+    flag = 0
+    visor.innerHTML = ""
+    
+    console.log("fazer a soma do  " + firstNumber + " + " + secondNumber)
+    let firstNumberInt = convertStringToNumber(firstNumber)
+    let secondNumberInt = convertStringToNumber(secondNumber)
+
+
+
+    let result = sum(firstNumberInt,secondNumberInt)
+
+    console.log("result  " + result)
+
+    showScreen(result)
+  }
+}
 
 function captureValueOperator(value){
   if (value == "c"){
@@ -42,30 +72,7 @@ function captureValueOperator(value){
   }
   
   if (value == "+"){
-    if (flag == 0 ){
-      
-      firstNumber = visor.innerHTML
-      flag = 1
-      console.log("capturando o fisrtnumber = " + firstNumber)
-      visor.innerHTML = ""
-    }
-    else if(flag == 1){
-      
-      secondNumber = visor.innerHTML
-      console.log("capturando o secund = " + secondNumber)
-
-      flag = 0
-      visor.innerHTML = ""
-      
-      console.log("fazer a soma do  " + firstNumber + " + " + secondNumber)
-      let firstNumberInt = convertStringToNumber(firstNumber)
-      let secondNumberInt = convertStringToNumber(secondNumber)
-      let result = sum(firstNumberInt,secondNumberInt)
-      console.log("result  " + result)
-
-      showScreen(result)
-    }
-
+    verifyTypeNumber()
   }
 
   if (value == "-"){
@@ -77,16 +84,15 @@ function captureValueOperator(value){
   }
 
 
-  if (value == "*"){console.log("esse é o =")
+  if (value == "*"){
+    
     console.log("esse é o *")
 
   }
 
 
   if (value == "="){
-    
-    
-
+    verifyTypeNumber()
   }
 
 }
