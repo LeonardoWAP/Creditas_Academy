@@ -1,8 +1,8 @@
-let arr = document.getElementsByTagName("button")
 let visor = document.getElementById("resultado");
 var firstNumber;
 var secondNumber;
-var flag = 0 
+var operator;
+var visorIsResult = false;
 
 //sempre vai ser chamado essa função quando clicar no botão
 
@@ -21,72 +21,158 @@ function captureOperator(value){
 
 function captureNumber(value){
   // console.log(value)
+  if (visorIsResult){
+    visorIsResult = false;
+    visor.innerHTML = ""
+  }
   showScreen(value)
+}
+function capturePoint(value){
+  if (!visor.innerHTML.includes(".")){
+    if (visorIsResult){
+      visorIsResult = false;
+      visor.innerHTML = ""
+    }
+    showScreen(value)
+  }
 }
 
 
 function sum(firstNumber,secondNumber){
-  
   return firstNumber + secondNumber
-  
 }
+
+function subtrai(firstNumber,secondNumber){
+  return firstNumber - secondNumber
+}
+
+function multiply(firstNumber,secondNumber){
+  return firstNumber * secondNumber
+}
+
+function division(firstNumber,secondNumber){
+  return firstNumber / secondNumber
+}
+
 
 function convertStringToNumber(number){
-  return parseInt(number)
+  if (!number){
+    number = 0;
+  }
+  return parseFloat(number)
 }
 
 
-function captureValueOperator(value){
-  if (value == "c"){
+function realizaOperacao(tipoDeOperador){
+  let result
+  switch(tipoDeOperador){
+
+    case "+":
+      result = sum(firstNumber,secondNumber)
+      console.log("result  " + result)
+      showScreen(result)
+      visorIsResult = true;
+      firstNumber = result
+     
+      
+      break
+
+    case "-":
+      result = subtrai(firstNumber,secondNumber)
+      console.log("result  " + result)
+      showScreen(result)
+      console.log(firstNumber + " - " + secondNumber)
+      visorIsResult = true;
+      firstNumber = result
+     
+      break
+
+    case "*":
+      result = multiply(firstNumber,secondNumber)
+      console.log("result  " + result)
+      showScreen(result)
+      visorIsResult = true;
+      firstNumber = result
+     
+      break
+
+    case "/":
+      result = division(firstNumber,secondNumber)
+      console.log("result  " + result)
+      showScreen(result)
+      visorIsResult = true;
+      firstNumber = result
+     
+      break
+
+     
+
+    default:
+      console.log("outra operação")
+  }
+}
+
+function verifyTypeNumber(tipoDeOperador){
+
+  if (firstNumber == null){
+    firstNumber = visor.innerHTML
+    console.log("First = " + firstNumber)
     visor.innerHTML = ""
   }
-  
-  if (value == "+"){
-    if (flag == 0 ){
-      
-      firstNumber = visor.innerHTML
-      flag = 1
-      console.log("capturando o fisrtnumber = " + firstNumber)
-      visor.innerHTML = ""
-    }
-    else if(flag == 1){
-      
+  else {
+
+    if (visorIsResult == false){
+      console.log("----")
       secondNumber = visor.innerHTML
-      console.log("capturando o secund = " + secondNumber)
-
-      flag = 0
+      console.log("SECOND= " + secondNumber)
       visor.innerHTML = ""
       
-      console.log("fazer a soma do  " + firstNumber + " + " + secondNumber)
-      let firstNumberInt = convertStringToNumber(firstNumber)
-      let secondNumberInt = convertStringToNumber(secondNumber)
-      let result = sum(firstNumberInt,secondNumberInt)
-      console.log("result  " + result)
-
-      showScreen(result)
+      
+      firstNumber = convertStringToNumber(firstNumber)
+      secondNumber = convertStringToNumber(secondNumber)
+      console.log("OPERADOR é " + firstNumber +  tipoDeOperador  + secondNumber)
+      realizaOperacao(tipoDeOperador)
     }
 
+  }
+
+}
+
+function captureValueOperator(value){
+  
+  if (value == "="){
+    verifyTypeNumber(operator)
+    visorIsResult = true;
+  }
+
+  if (value == "+"){
+    verifyTypeNumber(operator)
+    operator = "+"
   }
 
   if (value == "-"){
-    console.log("esse é o -")
+    verifyTypeNumber(operator)
+    operator = "-"
+    
   }
 
   if (value == "/"){
-    console.log("esse é o /")
+    verifyTypeNumber(operator)
+    operator = "/"
+   
   }
 
-
-  if (value == "*"){console.log("esse é o =")
-    console.log("esse é o *")
-
-  }
-
-
-  if (value == "="){
-    
-    
+  if (value == "*"){
+    verifyTypeNumber(operator)
+    operator = "*"
 
   }
 
+  if (value == "c"){
+    visor.innerHTML = ""
+    firstNumber= null;
+    secondNumber= null;
+    operator = null;
+    visorIsResult = false;
+  }
 }
