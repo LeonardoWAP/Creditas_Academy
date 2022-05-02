@@ -27,6 +27,15 @@ function captureNumber(value){
   }
   showScreen(value)
 }
+function capturePoint(value){
+  if (!visor.innerHTML.includes(".")){
+    if (visorIsResult){
+      visorIsResult = false;
+      visor.innerHTML = ""
+    }
+    showScreen(value)
+  }
+}
 
 
 function sum(firstNumber,secondNumber){
@@ -64,17 +73,19 @@ function realizaOperacao(tipoDeOperador){
       showScreen(result)
       visorIsResult = true;
       firstNumber = result
-      secondNumber = null
-      return
+     
+      
+      break
 
     case "-":
       result = subtrai(firstNumber,secondNumber)
       console.log("result  " + result)
       showScreen(result)
+      console.log(firstNumber + " - " + secondNumber)
       visorIsResult = true;
       firstNumber = result
-      secondNumber = null
-      return
+     
+      break
 
     case "*":
       result = multiply(firstNumber,secondNumber)
@@ -82,17 +93,19 @@ function realizaOperacao(tipoDeOperador){
       showScreen(result)
       visorIsResult = true;
       firstNumber = result
-      secondNumber = null
-      return
+     
+      break
 
-      case "/":
-        result = division(firstNumber,secondNumber)
-        console.log("result  " + result)
-        showScreen(result)
-        visorIsResult = true;
-        firstNumber = result
-        secondNumber = null
-        return
+    case "/":
+      result = division(firstNumber,secondNumber)
+      console.log("result  " + result)
+      showScreen(result)
+      visorIsResult = true;
+      firstNumber = result
+     
+      break
+
+     
 
     default:
       console.log("outra operação")
@@ -101,24 +114,27 @@ function realizaOperacao(tipoDeOperador){
 
 function verifyTypeNumber(tipoDeOperador){
 
-  if (!firstNumber){
+  if (firstNumber == null){
     firstNumber = visor.innerHTML
-    console.log("capturando o fisrtnumber = " + firstNumber)
+    console.log("First = " + firstNumber)
     visor.innerHTML = ""
-    
   }
   else {
-    secondNumber = visor.innerHTML
-    console.log("capturando o secund = " + secondNumber)
-    visor.innerHTML = ""
-    
-    console.log("fazer a soma do  " + firstNumber + " + " + secondNumber)
-    firstNumber = convertStringToNumber(firstNumber)
-    secondNumber = convertStringToNumber(secondNumber)
 
-    realizaOperacao(tipoDeOperador)
+    if (visorIsResult == false){
+      console.log("----")
+      secondNumber = visor.innerHTML
+      console.log("SECOND= " + secondNumber)
+      visor.innerHTML = ""
+      
+      
+      firstNumber = convertStringToNumber(firstNumber)
+      secondNumber = convertStringToNumber(secondNumber)
+      console.log("OPERADOR é " + firstNumber +  tipoDeOperador  + secondNumber)
+      realizaOperacao(tipoDeOperador)
+    }
 
- }
+  }
 
 }
 
@@ -130,31 +146,26 @@ function captureValueOperator(value){
   }
 
   if (value == "+"){
-    operator = "+"
     verifyTypeNumber(operator)
+    operator = "+"
   }
 
   if (value == "-"){
-    operator = "-"
     verifyTypeNumber(operator)
-    console.log("esse é o -")
+    operator = "-"
+    
   }
 
   if (value == "/"){
-    operator = "/"
     verifyTypeNumber(operator)
-    console.log("esse é o /")
+    operator = "/"
+   
   }
 
   if (value == "*"){
+    verifyTypeNumber(operator)
     operator = "*"
-    verifyTypeNumber(operator)
-    console.log("esse é o *")
-  }
 
-  if (value == "."){
-    verifyTypeNumber(operator)
-    console.log("esse é o .")
   }
 
   if (value == "c"){
