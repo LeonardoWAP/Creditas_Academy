@@ -16,4 +16,5 @@
 
 <a href="https://leonardowap.github.io/Creditas_Academy/Calculadora/"> 2. Calculadora desenvolvida em Java Script  </a> 
 
+<a href=""> 3. Exercícios de lógica realizados com Java Script  </a> 
 
