@@ -14,7 +14,6 @@
   
     Layout montado no figma : https://www.figma.com/file/8idkTLG5myiZXN7g6F292z/Untitled?node-id=3%3A323
 
-2. Calculadora desenvolvida em Java Script 
-
+<a href="https://leonardowap.github.io/Creditas_Academy/Calculadora/"> 2. Calculadora desenvolvida em Java Script  </a> 
 
 
